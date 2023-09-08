@@ -8,6 +8,9 @@ const ConstrctionForm = ({ calculation }) => {
     approx_cost: 1000,
   });
   const { barCharts } = useChart();
+  // useEffect(() => {
+  //   barCharts(initialValues);
+  // }, []);
   const handleSubmit = (values) => {
     console.log(values);
     calculation(values);

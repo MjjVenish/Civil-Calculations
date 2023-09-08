@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createContext } from "react";
 
 export const contextUser = createContext(null);
 
 const UserContext = ({ children }) => {
   const [total, setTotal] = useState([]);
+
+  useEffect(() => {
+    barCharts({ builtup_area: 1000, approx_cost: 1000 });
+  }, []);
   const barCharts = (values) => {
     const value = values.builtup_area * values.approx_cost;
     const firstMonth = {
