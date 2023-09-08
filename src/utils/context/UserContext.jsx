@@ -5,7 +5,8 @@ export const contextUser = createContext(null);
 
 const UserContext = ({ children }) => {
   const [total, setTotal] = useState([]);
-  const barCharts = (value) => {
+  const barCharts = (values) => {
+    const value = values.builtup_area * values.approx_cost;
     const firstMonth = {
       name: "1st Month 21.9%",
       datavalue: (value * 21.9) / 100,

@@ -4,13 +4,11 @@ import ApproxAmount from "../components/ApproxAmount";
 import QuantityMaterial from "../components/QuantityMaterial";
 import "../style/calculation.css";
 import PieCharts from "../components/PieCharts";
-import { useChart } from "../utils/hooks/userContext";
 import BarCharts from "../components/BarCharts";
 import MainNavBar from "../components/MainNavBar";
 import Calculation from "../components/Calculation";
 
 const Construction = () => {
-  const { barCharts } = useChart();
   const [formValue, setFormValue] = useState({
     builtup_area: 1000,
     approx_cost: 1000,
@@ -42,7 +40,6 @@ const Construction = () => {
     const flooring = parseInt(formValue?.builtup_area * 1.3);
     const finishers = parseInt((cost.finishers / 100) * totalCost);
     const fittings = parseInt((cost.fittings / 100) * totalCost);
-    barCharts(totalCost);
     setQuantity({
       cementQuantity,
       sandQuantity,

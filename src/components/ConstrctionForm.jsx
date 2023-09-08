@@ -1,14 +1,17 @@
 import { Formik, Form, Field } from "formik";
 import { useState } from "react";
+import { useChart } from "../utils/hooks/userContext";
 
 const ConstrctionForm = ({ calculation }) => {
   const [initialValues, setInitialValues] = useState({
     builtup_area: 1000,
     approx_cost: 1000,
   });
+  const { barCharts } = useChart();
   const handleSubmit = (values) => {
     console.log(values);
     calculation(values);
+    barCharts(values);
   };
   return (
     <Formik initialValues={initialValues} onSubmit={handleSubmit}>
