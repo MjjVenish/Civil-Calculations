@@ -50,8 +50,8 @@ const BarCharts = () => {
   return (
     <div className="bar-chart">
       <h3>
-        To <b>complete this construction</b> in
-        <span style={{ color: "red" }}>6 months</span> timeline
+        To <b>complete this construction</b> in{" "}
+        <span style={{ color: "red" }}>6 months</span> timeline{" "}
         <b>money required </b>is as below
       </h3>
       <Bar data={data} options={options}></Bar>
