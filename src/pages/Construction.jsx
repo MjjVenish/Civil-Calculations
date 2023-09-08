@@ -4,7 +4,6 @@ import ApproxAmount from "../components/ApproxAmount";
 import QuantityMaterial from "../components/QuantityMaterial";
 import "../style/calculation.css";
 import PieCharts from "../components/PieCharts";
-import ChartPie from "../components/ChartPie";
 import { useChart } from "../utils/hooks/userContext";
 import BarCharts from "../components/BarCharts";
 import MainNavBar from "../components/MainNavBar";
@@ -88,7 +87,7 @@ const Construction = () => {
         <div className="lab-view">
           <div></div>
           <ConstrctionForm calculation={calculation} />
-          <ApproxAmount amount={amount} cost={cost} />
+          <ApproxAmount amount={amount} cost={cost} setCost={setCost} />
           <BarCharts />
           <QuantityMaterial quantity={quantity} formValue={formValue} />
           <PieCharts amount={amount} />

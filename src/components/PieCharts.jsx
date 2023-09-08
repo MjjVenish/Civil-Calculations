@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { VictoryPie } from "victory-pie";
 // import { Chart as ChartJS, ArcElement, Legend, Tooltip } from "chart.js";
 // import { Pie } from "react-chartjs-2";
@@ -39,7 +38,6 @@ const PieCharts = ({ amount }) => {
     steelAmount,
     finishers,
     fittings,
-    totalCost,
   } = amount;
   const mydata = [
     { x: `Cement,16.4% ${cementAmount}Rs`, y: cementAmount },
