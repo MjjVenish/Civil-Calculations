@@ -61,16 +61,7 @@ const Construction = () => {
       fittings,
       totalCost,
     });
-  }, [
-    formValue,
-    barCharts,
-    cost.aggregate,
-    cost.cement,
-    cost.finishers,
-    cost.fittings,
-    cost.sand,
-    cost.steel,
-  ]);
+  }, [formValue]);
 
   // Function to update the state based on viewport width
   const updateStateBasedOnViewport = () => {
