@@ -3,20 +3,14 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import Header from "./components/Header";
-import NavBar from "./components/NavBar";
-import Construction from "./pages/Construction";
-// import MainNavBar from "./components/MainNavBar";
 import UserContext from "./utils/context/UserContext";
+import AppRoutes from "./Routes/AppRoutes";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <UserContext>
     <BrowserRouter>
-      <Header />
-      <NavBar />
-      <Construction />
-      {/* <MainNavBar /> */}
+      <AppRoutes />
     </BrowserRouter>
   </UserContext>
 );

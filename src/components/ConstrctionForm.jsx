@@ -1,6 +1,7 @@
 import { Formik, Form, Field } from "formik";
 import { useState } from "react";
 import { useChart } from "../utils/hooks/userContext";
+import Submit from "./Submit";
 
 const ConstrctionForm = ({ calculation }) => {
   const [initialValues, setInitialValues] = useState({
@@ -8,11 +9,8 @@ const ConstrctionForm = ({ calculation }) => {
     approx_cost: 1000,
   });
   const { barCharts } = useChart();
-  // useEffect(() => {
-  //   barCharts(initialValues);
-  // }, []);
+
   const handleSubmit = (values) => {
-    console.log(values);
     calculation(values);
     barCharts(values);
   };
@@ -35,21 +33,11 @@ const ConstrctionForm = ({ calculation }) => {
             <Field type="number" name="approx_cost" id="approx_cost" />
             <span>Rs.</span>
           </div>
-          <div className="flex just-end">
-            <input className="butt but-sub" type="submit" value={"Calculate"} />
-            <input
-              className="butt but-res"
-              type="reset"
-              value={"Reset"}
-              onClick={() => {
-                setInitialValues({
-                  builtup_area: 0,
-                  approx_cost: 0,
-                });
-                calculation(initialValues);
-              }}
-            />
-          </div>
+          <Submit
+            setInitialValues={setInitialValues}
+            initialValues={initialValues}
+            calculation={calculation}
+          />
         </Form>
       )}
     </Formik>

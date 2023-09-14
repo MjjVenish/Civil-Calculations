@@ -73,6 +73,9 @@ border-bottom: 1px solid #9c9c9c;
         color: #bcc2cb;
         text-decoration: none;
     }
+    .dis-nav a:hover {
+        color: #fff;
+    }
     .icon-option{
         display: none;
     }
@@ -85,4 +88,20 @@ border-bottom: 1px solid #9c9c9c;
             padding-top: 0px;
             flex: 1 1 0;
         }
+}
+
+.labview-nav{
+    height: 47vh;
+    width: 65vw;
+    left: 6vw;
+    top: 6vh;
+    padding: 12px 10px;
+    overflow-wrap: break-word;
+}
+.hover-nav a{
+    padding: 9px 8px;
+    text-transform: capitalize;
+}
+.hover-nav{
+    flex-wrap: wrap;
 }

@@ -76,7 +76,6 @@ const Construction = () => {
       setIsTrue(false);
     }
   };
-  console.log(isTrue);
   // Listen for window resize events and update state
   useEffect(() => {
     window.addEventListener("resize", updateStateBasedOnViewport);

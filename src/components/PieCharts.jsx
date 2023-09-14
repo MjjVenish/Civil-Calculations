@@ -1,6 +1,7 @@
-import { VictoryPie } from "victory-pie";
 // import { Chart as ChartJS, ArcElement, Legend, Tooltip } from "chart.js";
 // import { Pie } from "react-chartjs-2";
+
+import ChartPie from "./ChartPie";
 
 // ChartJS.register(ArcElement, Legend, Tooltip);
 
@@ -59,11 +60,7 @@ const PieCharts = ({ amount }) => {
           ft<sup>2</sup>
         </span>
       </h3>
-      <VictoryPie
-        data={mydata}
-        colorScale={["blue", "red", "yellow", "red", "grey", "green"]}
-        radius={100}
-      />
+      <ChartPie mydata={mydata} />
     </div>
   );
 };

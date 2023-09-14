@@ -4,6 +4,7 @@ import "../style/navbar.css";
 import { useState } from "react";
 import MainNavBar from "./MainNavBar";
 import TechNavBar from "./TechNavBar";
+import MainNavChild from "./MainNavChild";
 
 const Header = () => {
   const [nav, setNav] = useState({
@@ -11,7 +12,12 @@ const Header = () => {
     estimator: false,
     tech: false,
     envior: false,
+    lab: false,
   });
+  const [hov, setHov] = useState(false);
+
+  const hidden = () => setHov(false);
+
   return (
     <header className=" ">
       <div className="container-fluid flex main-head items-center just-arround">
@@ -87,11 +93,18 @@ const Header = () => {
         </nav>
       )}
       <div className="dis-none">
-        <nav className="dis-nav">
+        <nav className="dis-nav relative">
           <NavLink>
             <AiOutlineHome />
           </NavLink>
-          <NavLink>Quantity Estimator</NavLink>
+          <NavLink onClick={() => setHov(!hov)}>Quantity Estimator</NavLink>
+          {hov && (
+            <div className="absolute flex bg-black labview-nav">
+              <nav className=" nav-main flex-1 flex flex-dir hover-nav">
+                <MainNavChild brea={"br"} hidden={hidden} />
+              </nav>
+            </div>
+          )}
           <NavLink>Concreate Technolgy</NavLink>
           <NavLink>Geotechnical Engineering</NavLink>
           <NavLink>Environmental Engineering</NavLink>
