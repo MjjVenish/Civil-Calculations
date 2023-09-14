@@ -1,5 +1,5 @@
 import { Formik, Form, Field } from "formik";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Submit from "./Submit";
 
 const CementForm = ({ calculation, unit }) => {
@@ -65,7 +65,7 @@ const CementForm = ({ calculation, unit }) => {
             <Field type="number" name="depthCm" id="DepthCm" />
             <span>{unit.split("/")[1]}</span>
           </div>
-          <Submit />
+          <Submit setInitialValues={setInitialValues} />
         </Form>
       )}
     </Formik>
