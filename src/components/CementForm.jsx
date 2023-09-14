@@ -24,7 +24,7 @@ const CementForm = ({ calculation, unit }) => {
     calculation(values);
     props.resetForm();
   };
-
+  console.log(unit === "Feet/Inch");
   return (
     <Formik initialValues={initialValues} onSubmit={handleSubmit}>
       {(formik) => (
@@ -47,21 +47,31 @@ const CementForm = ({ calculation, unit }) => {
               name="length"
               id="Length"
             />
-            <span>{unit.split("/")[0]}</span> <br />
+            <span id={`${unit === "Feet/Inch" ? "fee" : ""}`}>
+              {unit.split("/")[0]}
+            </span>
+            <br />
             <Field type="number" name="lengthCm" id="LengthCm" />
             <span>{unit.split("/")[1]}</span>
           </div>
           <div className="inch-cm">
             <label htmlFor="Width">Width</label> <br />
             <Field type="number" name="width" id="Width" className="inch-in" />
-            <span className="er-span">{unit.split("/")[0]}</span>
+            <span
+              className={`er-span`}
+              id={`${unit === "Feet/Inch" ? "fee" : ""}`}
+            >
+              {unit.split("/")[0]}
+            </span>
             <Field type="number" name="widthCm" id="WidthCm" />
             <span>{unit.split("/")[1]}</span>
           </div>
           <div className="inch-cm">
             <label htmlFor="Width">Depth</label> <br />
             <Field type="number" name="depth" id="Depth" className="inch-in" />
-            <span>{unit.split("/")[0]}</span>
+            <span id={`${unit === "Feet/Inch" ? "fee" : ""}`}>
+              {unit.split("/")[0]}
+            </span>
             <Field type="number" name="depthCm" id="DepthCm" />
             <span>{unit.split("/")[1]}</span>
           </div>

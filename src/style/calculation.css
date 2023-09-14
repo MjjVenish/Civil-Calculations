@@ -166,8 +166,10 @@ b{
 }
 .inch-cm span{
     background-color: #c9c5c5;
-    padding:10px 12px ;
+    padding:10px 10px;
 }
+
+
 .inch-in{
     margin-top: 7px;
 }
@@ -186,6 +188,9 @@ b{
 }
 .ans-cem-con h1{
     color: #b43315;
+}
+#fee {
+    padding: 10px 15px;
 }
 .charts-pie{
     background-color: #fff;
@@ -263,6 +268,9 @@ border-bottom: 1px solid #9c9c9c
     .inch-cm .inch-in {
         width: 82%;
     }
+        #fee {
+            padding: 10px 18px;
+        }
 
 }
 
@@ -408,5 +416,8 @@ border-bottom: 1px solid #9c9c9c
             .cem-con-calcul div,.calci-of-cem div{
                 height: 25vh;
             }
+                        #fee {
+                            padding: 10px 15px;
+                        }
 
 }
