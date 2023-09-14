@@ -33,7 +33,7 @@ const MainNavChild = ({ brea, hidden }) => {
       <NavLink to={"/"} onClick={() => hidden()}>
         <img src={cement} alt="" /> Constrction Cost Estimation
       </NavLink>
-      <NavLink>
+      <NavLink to={"/Carpet-Area"}>
         <img src={carpetArea} alt="" />
         Carpet Area / Built up Area / Super built up Area {brea ? <br /> : ""}
         Calculator
@@ -41,73 +41,73 @@ const MainNavChild = ({ brea, hidden }) => {
       <NavLink to={"/Cement-Concrete-Calculator"} onClick={() => hidden()}>
         <img src={pcc} alt="" /> Cement Concrete Calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/Plastering-Calculator"}>
         <img src={plastering} alt="" /> Plastering Calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/Brick-Calculator"}>
         <img src={Brick} alt="" /> Brick Calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/Concrete Block Calculator"}>
         <img src={concreteBlock} alt="" /> Concrete Block Calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/Precast Component Wall Calculator"}>
         <img src={precast} alt="" /> Precast Component Wall Calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/Flooring Calculator"}>
         <img src={flooring} alt="" /> Flooring Calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/Counterop Calculator"}>
         <img src={counterop} alt="" /> Counterop (Platform) Calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/Tank Volume Calculator"}>
         <img src={tank} alt="" /> Tank Volume Calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/Air Conditioner Size Calculator"}>
         <img src={air} alt="" /> Air Conditioner Size Calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/Solar Water heater Calculator"}>
         <img src={solar} alt="" /> Solar Water heater Calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/paint work calculator"}>
         <img src={paint} alt="" /> paint work calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/excavation calculator"}>
         <img src={excavation} alt="" /> excavation calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/wood framing calculator"}>
         <img src={wood} alt="" /> wood framing calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/playwood sheets calculator"}>
         <img src={playwood} alt="" /> playwood sheets calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/anti termite calculator"}>
         <img src={anti} alt="" /> anti termite calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/round column calculator"}>
         <img src={round} alt="" /> round column calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/stair case calculator"}>
         <img src={stair} alt="" /> stair case calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/top soil calculator"}>
         <img src={top} alt="" /> top soil calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/steel weight calculator"}>
         <img src={steelweight} alt="" /> steel weight calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/concrete tube calculator"}>
         <img src={concretetube} alt="" /> concrete tube calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/roof pitch calculator"}>
         <img src={roof} alt="" /> roof pitch calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/asphalt calculator"}>
         <img src={asphalt} alt="" /> asphalt calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/steel quantity calculator"}>
         <img src={steelquantity} alt="" /> steel quantity calculator
       </NavLink>
-      <NavLink>
+      <NavLink to={"/civil unit calculator"}>
         <img src={civilunit} alt="" /> civil unit calculator
       </NavLink>
     </>
