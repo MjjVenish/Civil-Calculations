@@ -190,7 +190,7 @@ b{
     color: #b43315;
 }
 #fee {
-    padding: 10px 15px;
+    padding: 10px 5%;
 }
 .charts-pie{
     background-color: #fff;
@@ -269,11 +269,15 @@ border-bottom: 1px solid #9c9c9c
         width: 82%;
     }
         #fee {
-            padding: 10px 18px;
+            padding: 10px 4%;
         }
 
 }
-
+@media (min-width:825px){
+#main-div-of {
+        height: 70vh;
+    }
+}
 @media (min-width:1000px) {
     .form-cal {
         width: 100%;
