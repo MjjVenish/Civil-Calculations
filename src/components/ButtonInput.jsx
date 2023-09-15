@@ -1,5 +1,4 @@
 import { PropTypes } from "prop-types";
-import { useChart } from "../utils/hooks/userContext";
 
 const ButtonInput = ({
   type,
@@ -8,8 +7,8 @@ const ButtonInput = ({
   setInitialValues,
   initialValues,
   calculation,
+  barCharts,
 }) => {
-  //   const { barCharts } = useChart();
   return (
     <input
       type={type}
@@ -18,7 +17,7 @@ const ButtonInput = ({
       onClick={() => {
         calculation(initialValues);
         setInitialValues(initialValues);
-        // barCharts(initialValues);
+        barCharts(initialValues);
       }}
     />
   );
