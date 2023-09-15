@@ -24,7 +24,6 @@ const CementForm = ({ calculation, unit }) => {
     calculation(values);
     props.resetForm();
   };
-  console.log(unit === "Feet/Inch");
   return (
     <Formik initialValues={initialValues} onSubmit={handleSubmit}>
       {(formik) => (
@@ -75,7 +74,11 @@ const CementForm = ({ calculation, unit }) => {
             <Field type="number" name="depthCm" id="DepthCm" />
             <span>{unit.split("/")[1]}</span>
           </div>
-          <Submit setInitialValues={setInitialValues} />
+          <Submit
+            setInitialValues={setInitialValues}
+            initialValues={initialValues}
+            calculation={calculation}
+          />
         </Form>
       )}
     </Formik>

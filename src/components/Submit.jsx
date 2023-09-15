@@ -1,20 +1,22 @@
 import React from "react";
-import { useChart } from "../utils/hooks/userContext";
+
+import ButtonInput from "./ButtonInput";
 
 const Submit = ({ setInitialValues, initialValues, calculation }) => {
-  const { barCharts } = useChart();
   return (
     <div className="flex just-end">
-      <input className="butt but-sub" type="submit" value={"Calculate"} />
-      <input
-        className="butt but-res"
-        type="reset"
+      <ButtonInput
+        className={"butt but-sub"}
+        value={"Calculate"}
+        type={"submit"}
+      />
+      <ButtonInput
+        className={"butt but-res"}
         value={"Reset"}
-        onClick={() => {
-          calculation(initialValues);
-          setInitialValues(initialValues);
-          barCharts(initialValues);
-        }}
+        type={"reset"}
+        setInitialValues={setInitialValues}
+        initialValues={initialValues}
+        calculation={calculation}
       />
     </div>
   );
