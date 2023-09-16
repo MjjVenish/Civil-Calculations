@@ -6,7 +6,7 @@ const ChartPie = ({ mydata }) => {
     <VictoryPie
       data={mydata}
       colorScale={["blue", "red", "yellow", "red", "grey", "green"]}
-      radius={60}
+      radius={90}
     />
   );
 };
