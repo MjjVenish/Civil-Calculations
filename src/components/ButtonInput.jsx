@@ -26,6 +26,7 @@ ButtonInput.propTypes = {
   type: PropTypes.string,
   className: PropTypes.string,
   value: PropTypes.string,
+  initialValues: PropTypes.string,
 };
 
 export default ButtonInput;
