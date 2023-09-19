@@ -23,14 +23,14 @@ const Quantity = ({ chart }) => {
             <td>{cementBag} Bags</td>
           </tr>
           <tr>
-            <td>1</td>
+            <td>2</td>
             <td>
               <img src={sand} alt="" /> Sand
             </td>
             <td>{sandKg / 1000} Ton</td>
           </tr>
           <tr>
-            <td>1</td>
+            <td>3</td>
             <td>
               <img src={agg} alt="" /> Aggregate
             </td>
